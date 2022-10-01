@@ -3,7 +3,6 @@
 This repository contains the exercises for the topic _git workflows_ of the [RSE102](https://github.com/RSE-102/Lecture-Material) course.
 The corresponding lecture slides can be found at [sustainable-simulation-software.gitlab.io](https://sustainable-simulation-software.gitlab.io/course-material/slides/git_intro/workflows/index.html#/title-slide).
 
-
 The exercises should be worked on in groups of two people.
 Start with forking this repository (each one of you), and decide which of the two
 forks should act as the "main repository". Note that the exercises
