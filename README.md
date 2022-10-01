@@ -48,7 +48,7 @@ To run only the test you are working on, use `python3 -m pytest FILE.py -k TESTN
 
 - repeat the same procedure as from exercise 1, but this time using the file `exercise2.py`
 - this time we want a semi-linear history, which should now continue like this:
-- ```sh
+  ```sh
     * merge ex2 task B
     | \
     |  * ex2 task B
@@ -67,7 +67,7 @@ To run only the test you are working on, use `python3 -m pytest FILE.py -k TESTN
 
 - repeat the procedure from the previous exercises, but this time using the file `exercise3.py`
 - we again want a semi-linear history, but this time the entire exercise should be done in one merge request:
-- ```sh
+  ```sh
     * merge ex3
     | \
     |  * ex3 task B
@@ -83,7 +83,7 @@ To run only the test you are working on, use `python3 -m pytest FILE.py -k TESTN
 ## Exercise 4
 
 - in this exercise, we want to achieve yet a different layout of the git history:
-- ```sh
+  ```sh
     * merge ex4
     | \
     |  * merge ex4 task B
