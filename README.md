@@ -100,3 +100,7 @@ To run only the test you are working on, use `python3 -m pytest FILE.py -k TESTN
     | \
     ...
     ```
+   
+   ## License
+   
+   See `License` file.
