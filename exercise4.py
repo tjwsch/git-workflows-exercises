@@ -9,10 +9,26 @@ from exercise3 import Rectangle
 # Task A: add missing documentation for the public functions of the `Raster` class
 # Task B: add documentation for the `Raster` class itself
 
+"""
+This file contains a class that represents a raster image.
+"""
+
 DataArray = List[List[float]]
 
 class Raster:
+    """A class that represents a raster image. The image is defined by a frame
+    
+    Attributes:
+        frame: The frame of the raster image
+        resolution: The resolution of the raster image as (x_resolution, y_resolution)
+        spacing: The spacing between two adjacent pixels as (x_spacing, y_spacing)
+        values: The values of the raster image as a 2D array
+    """
+    
     def __init__(self, frame: Rectangle, resolution: Tuple[int, int]) -> None:
+        """
+        Initialize a raster image.
+        """
         self._frame = frame
         self._resolution = resolution
         self._spacing = (
@@ -27,9 +43,14 @@ class Raster:
         return self._resolution
 
     def set_at(self, index: Tuple[int, int], value: float) -> None:
+        """Set the value at the given index"""
         self._values[index[0]][index[1]] = value
 
     def set_from(self, function: Callable[[Point2D], float]) -> None:
+        """
+        Set the values of the raster from a function. 
+        The function is called with a `Point2D` object as argument and should return a float.
+        """
         for i in range(self._x_resolution()):
             for j in range(self._y_resolution()):
                 idx = (i, j)
@@ -37,6 +58,7 @@ class Raster:
                 self.set_at(idx, function(point))
 
     def show(self) -> None:
+        """Show the raster image"""
         pcolormesh(self._values)
         show()
         close()
