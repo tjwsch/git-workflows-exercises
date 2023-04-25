@@ -16,6 +16,15 @@ This file contains a class that represents a raster image.
 DataArray = List[List[float]]
 
 class Raster:
+    """A class that represents a raster image. The image is defined by a frame
+    
+    Attributes:
+        frame: The frame of the raster image
+        resolution: The resolution of the raster image as (x_resolution, y_resolution)
+        spacing: The spacing between two adjacent pixels as (x_spacing, y_spacing)
+        values: The values of the raster image as a 2D array
+    """
+    
     def __init__(self, frame: Rectangle, resolution: Tuple[int, int]) -> None:
         """
         Initialize a raster image.
