@@ -25,17 +25,18 @@ class Rectangle:
     def upper_right(self) -> Point2D:
         return self.corner(3)
 
-    def interval(self, low_point: float, lower_bound: float, upper_bound: float) -> bool:
-        return lower_bound <= low_point <= upper_bound
+    def interval(self, low_point: float, lower_bound: float, upper_bound: float, tolerance: float = 0.0) -> bool:
+        return lower_bound - tolerance <= low_point <= upper_bound + tolerance
 
-    def contains(self, point: Point2D) -> bool:
+    def contains(self, point: Point2D, tolerance: float = 0.0) -> bool:
         # Task A: remove duplication by defining a function
         #         that checks if a value is within an interval
         #         and reuse that here.
         ll_px = point.x - self._lower_left.x
         ll_py = point.y - self._lower_left.y
-        lower_x = self.interval(ll_px, 0, self._dx)
-        lower_y = self.interval(ll_py, 0, self._dy)
+
+        lower_x = self.interval(ll_px, 0, self._dx, tolerance)
+        lower_y = self.interval(ll_py, 0, self._dy, tolerance)
         return lower_x and lower_y
 
     def _is_idx_on_upper_edge(self, i: int) -> bool:
