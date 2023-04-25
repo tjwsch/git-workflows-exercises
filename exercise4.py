@@ -9,6 +9,10 @@ from exercise3 import Rectangle
 # Task A: add missing documentation for the public functions of the `Raster` class
 # Task B: add documentation for the `Raster` class itself
 
+"""
+This file contains a class that represents a raster image.
+"""
+
 DataArray = List[List[float]]
 
 class Raster:
