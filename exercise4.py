@@ -18,7 +18,7 @@ DataArray = List[List[float]]
 class Raster:
     """A class that represents a raster image. The image is defined by a frame
     
-    Attributes:
+    Attributes:asdfa
         frame: The frame of the raster image
         resolution: The resolution of the raster image as (x_resolution, y_resolution)
         spacing: The spacing between two adjacent pixels as (x_spacing, y_spacing)
@@ -61,7 +61,7 @@ class Raster:
         """Show the raster image"""
         pcolormesh(self._values)
         show()
-        close()
+        close() 
 
     def _make_data_array(self) -> DataArray:
         return [
