@@ -61,7 +61,7 @@ class Raster:
         """Show the raster image"""
         pcolormesh(self._values)
         show()
-        close() 
+        close()
 
     def _make_data_array(self) -> DataArray:
         return [
